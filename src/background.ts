@@ -23,10 +23,7 @@ Cache.enabled = true
 
 gsap.registerPlugin(InertiaPlugin,ScrollTrigger,ScrollSmoother,ScrollToPlugin,TextPlugin);
 
-ScrollTrigger.defaults({
-    scroller: "#app"
-});
-
+//ScrollTrigger.normalizeScroll(true);      // fixes iOS/WebView scroll jank
 ScrollTrigger.config({ ignoreMobileResize: true });
 
 export function setBackground(container: HTMLElement, modelUrl: string): () => void {
@@ -128,8 +125,6 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
             rotY: -20.7,
         }
 
-
-
         const tl1 = gsap.timeline({
             lazy: true,
             scrollTrigger: {
@@ -145,8 +140,9 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
             rotY: -720
         }, 0);
 
-        gsap.set("#dialog1", { xPercent: 200 });
+        gsap.set("#dialog1", { xPercent: 100 });
         gsap.set("#dialog2", { xPercent: -200 });
+        gsap.set("#dialog3", { xPercent: 100 });
 
         tl1.to("#dialog1", {
             opacity: 1,
@@ -154,7 +150,7 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
         }, 0);
 
         tl1.to("#dialog2", {
-            xPercent: 200
+            xPercent: 0
         }, 0.1);
 
         //@ts-ignore
@@ -171,14 +167,15 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
 
         gsap.to("#dialog3", {
             lazy: true,
-            xPercent: -140,
+            xPercent: -15,
             ease: "power1.inOut",
 
             scrollTrigger:{
                 trigger: "#page2",
-                start: "bottom top",
+                start: "bottom top+=100",
                 scrub: 1.2,
                 pin: true,
+                markers: true
             }
         })
 
