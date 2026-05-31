@@ -1,17 +1,35 @@
 import './style.css'
-import {setBackground} from './background.ts'
+const { setBackground } = await import('./background.ts')
+//import {setBackground} from "./background.ts";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="background"></section>
-<div id="title">
-    <b>MEOW</b>
-</div>
-<div class="dialogbox" id="dialog1">
-    <b>Olaaa <33</b>
-</div>
+    <div id="page1" class="sect">
+
+        <div id="odeiohtml">
+            <section id="kitty-container"></section>
+
+            <div class="dialogbox" id="dialog1">
+                <b>Olaaa <33</b>
+            </div>
+            <div class="dialogbox" id="dialog2">
+                <b>xauu < /3</b>
+            </div>
+        </div>
+    </div>
+    <div id="page2" class="sect">
+
+        <b class="dialogbox centerlate">Bateu a preguica...</b>
+
+
+    </div>
+    <div id="page3" class="sect">
+        <b id="dialog3" class="dialogbox">Carrega aqui ^</b>
+        <img id="flower" class="centerlate" src="../public/flower.png" alt="">
+
+    </div>
+
 `
 
-
 //@ts-ignore
-const cleanup = setBackground(document.querySelector('#background')!, '/models/Cat.glb');
+const cleanup = setBackground(document.querySelector('#kitty-container')!, '/models/Cat.glb');
 //cleanup()
