@@ -167,6 +167,7 @@ p {
     padding: 0;
     text-transform: uppercase !important;
     text-rendering: optimizeLegibility !important;
+    align-content: center;
 }
 
 #kitty-container {
