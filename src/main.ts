@@ -19,7 +19,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     <div id="page2" class="sect">
 
-        <b class="dialogbox centerlate">Bateu a preguica...</b>
+        <b class="dialogbox centerlate">uhhhh...</b>
 
 
     </div>
