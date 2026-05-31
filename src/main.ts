@@ -24,7 +24,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     <div id="page3" class="sect">
         <b id="dialog3" class="dialogbox">Carrega aqui ^</b>
-        <img id="flower" class="centerlate" src="../public/flower.png" alt="">
+        <img id="flower" class="centerlate" src="flower.png" alt="">
 
     </div>
 
