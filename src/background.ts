@@ -175,7 +175,6 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
                 start: "bottom top+=100",
                 scrub: 1.2,
                 pin: true,
-                markers: true
             }
         })
 

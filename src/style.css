@@ -37,6 +37,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
+    background-color: var(--bg) !important;
 }
 
 h1,
@@ -156,6 +157,7 @@ p {
     gap: 5px;
 
     * {
+        align-content: center;
     }
 }
 
