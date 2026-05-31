@@ -145,12 +145,11 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
         gsap.set("#dialog3", { xPercent: 100 });
 
         tl1.to("#dialog1", {
-            opacity: 1,
             xPercent: -200
         }, 0);
 
         tl1.to("#dialog2", {
-            xPercent: 0
+            xPercent: 100
         }, 0.1);
 
         //@ts-ignore
