@@ -19,10 +19,21 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js')
 
+Cache.enabled = true
+
 gsap.registerPlugin(InertiaPlugin,ScrollTrigger,ScrollSmoother,ScrollToPlugin,TextPlugin);
 
+ScrollTrigger.defaults({
+    scroller: "#app"
+});
 
-Cache.enabled = true
+ScrollTrigger.normalizeScroll({
+    allowNestedScroll: true,
+    lockAxis: false,
+    type: "touch,wheel,pointer"
+});
+
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 export function setBackground(container: HTMLElement, modelUrl: string): () => void {
     const w = container.clientWidth
@@ -123,15 +134,13 @@ export function setBackground(container: HTMLElement, modelUrl: string): () => v
             rotY: -20.7,
         }
 
-        ScrollTrigger.defaults({
-            scroller: "#app"
-        });
+
 
         const tl1 = gsap.timeline({
             lazy: true,
             scrollTrigger: {
                 trigger: "#page1",
-                start: "center center",
+                start: "center+=100 center",
                 end: "+=300%",
                 pin: true,
                 scrub: 1,

@@ -80,7 +80,6 @@ p {
     overflow-y: auto;
     overflow-x: hidden;
     margin: 0 auto;
-    padding-top: var(--header-height);
     text-align: center;
     border-inline: 1px solid var(--border);
     flex-direction: column;
@@ -93,6 +92,7 @@ p {
     position: absolute;
     color: var(--accent);
     font-size: 2em;
+    will-change: transform;
 
     z-index: 10000;
 }
@@ -184,6 +184,18 @@ p {
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+
+#arrow {
+    display: flex;
+    font-size: 2em;
+    font-weight: bolder;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: fit-content;
+    z-index: 999999;
 }
 
 #flower {

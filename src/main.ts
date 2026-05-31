@@ -3,6 +3,7 @@ const { setBackground } = await import('./background.ts')
 //import {setBackground} from "./background.ts";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+    <div id="arrow">↓</div>
     <div id="page1" class="sect">
 
         <div id="odeiohtml">
